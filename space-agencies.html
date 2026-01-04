@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Space Agencies</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(to bottom, #050016, #0b0330);
+            color: #e6e6ff;
+        }
+
+        header {
+            background: #120033;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            opacity: 0.8;
+        }
+
+        main {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: #13002e;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+        }
+
+        .card img {
+            width: 90px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .card h3 {
+            margin-top: 10px;
+            color: #ffd369;
+            font-size: 1.4rem;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin: 6px 0;
+        }
+
+        .missions {
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #cfd3ff;
+        }
+
+        footer {
+            background: #120033;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: aqua;
+            text-decoration: none;
+            margin-left: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>World Space Agencies</h1>
+    <p>Exploring the universe beyond Earth 🚀</p>
+</header>
+
+<main>
+    <div class="grid">
+
+        <!-- ISRO -->
+        <div class="card">
+            <img src="https://wallpapercave.com/wp/wp4981187.png" alt="ISRO Logo">
+            <h3>ISRO (India)</h3>
+            <p>Founded in 1969, ISRO focuses on affordable space technology for national development.</p>
+
+            <div class="missions">
+                <strong>Major Missions:</strong><br>
+                • Chandrayaan-1, 2 & 3 (Moon)<br>
+                • Mangalyaan (Mars Orbiter Mission)<br>
+                • Gaganyaan (Human Spaceflight – upcoming)
+            </div>
+
+            <div class="missions">
+                <strong>Key Events:</strong><br>
+                • 2014 – Mars mission success on first attempt<br>
+                • 2023 – First soft landing near Moon’s south pole
+            </div>
+        </div>
+
+        <!-- NASA -->
+        <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg" alt="NASA Logo">
+            <h3>NASA (USA)</h3>
+            <p>Established in 1958, NASA leads global space exploration and scientific research.</p>
+
+            <div class="missions">
+                <strong>Major Missions:</strong><br>
+                • Apollo Moon Missions<br>
+                • Hubble Space Telescope<br>
+                • Perseverance & Curiosity Rovers
+            </div>
+
+            <div class="missions">
+                <strong>Key Events:</strong><br>
+                • 1969 – First humans on the Moon<br>
+                • 2021 – James Webb Space Telescope launch
+            </div>
+        </div>
+
+        <!-- ESA -->
+        <div class="card">
+            <img src="https://esahubble.org/media/archives/logos/screen/esa_sig_white.jpg" alt="ESA Logo">
+            <h3>ESA (Europe)</h3>
+            <p>The European Space Agency is a collaboration of multiple European nations.</p>
+
+            <div class="missions">
+                <strong>Major Missions:</strong><br>
+                • Rosetta (Comet study)<br>
+                • Gaia (Star mapping)<br>
+                • Ariane Launch Vehicles
+            </div>
+
+            <div class="missions">
+                <strong>Key Events:</strong><br>
+                • 2014 – First spacecraft to land on a comet
+            </div>
+        </div>
+
+        <!-- SpaceX -->
+        <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/de/SpaceX-Logo.svg" alt="SpaceX Logo">
+            <h3>SpaceX</h3>
+            <p>Founded by Elon Musk, SpaceX revolutionized private spaceflight.</p>
+
+            <div class="missions">
+                <strong>Major Projects:</strong><br>
+                • Falcon 9 & Falcon Heavy<br>
+                • Dragon Crew Missions<br>
+                • Starship (Mars Mission)
+            </div>
+
+            <div class="missions">
+                <strong>Key Events:</strong><br>
+                • First reusable rocket landing<br>
+                • First private company to send astronauts to ISS
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<footer>
+    <p>© 2026 Space Agencies Information</p>
+    <a href="cp.html">Home</a>
+</footer>
+
+</body>
+</html>

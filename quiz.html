@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Space Quiz</title>
+
+<style>
+body{
+    background:#1b1b3a;
+    color:white;
+    font-family:Arial, sans-serif;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    padding:20px;
+}
+
+h1{
+    text-align:center;
+    color:aqua;
+}
+
+.question{
+    margin:20px 0;
+    padding:15px;
+    border:1px solid aqua;
+    border-radius:10px;
+}
+
+button{
+    background:aqua;
+    color:black;
+    padding:12px 20px;
+    border:none;
+    font-size:18px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#00cccc;
+}
+
+#result{
+    margin-top:20px;
+    font-size:22px;
+    color:yellow;
+    text-align:center;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+<h1>🌍 Solar System & Space Quiz</h1>
+
+<form id="quiz">
+
+<!-- Q1 -->
+<div class="question">
+1. Which is the largest planet in our solar system?<br>
+<input type="radio" name="q1" value="0"> Earth<br>
+<input type="radio" name="q1" value="1"> Jupiter<br>
+<input type="radio" name="q1" value="0"> Mars<br>
+<input type="radio" name="q1" value="0"> Saturn
+</div>
+
+<!-- Q2 -->
+<div class="question">
+2. Which planet is known as the Red Planet?<br>
+<input type="radio" name="q2" value="1"> Mars<br>
+<input type="radio" name="q2" value="0"> Venus<br>
+<input type="radio" name="q2" value="0"> Mercury<br>
+<input type="radio" name="q2" value="0"> Jupiter
+</div>
+
+<!-- Q3 -->
+<div class="question">
+3. The Sun is a:<br>
+<input type="radio" name="q3" value="1"> Star<br>
+<input type="radio" name="q3" value="0"> Planet<br>
+<input type="radio" name="q3" value="0"> Galaxy<br>
+<input type="radio" name="q3" value="0"> Asteroid
+</div>
+
+<!-- Q4 -->
+<div class="question">
+4. Which planet has the most moons?<br>
+<input type="radio" name="q4" value="0"> Earth<br>
+<input type="radio" name="q4" value="1"> Saturn<br>
+<input type="radio" name="q4" value="0"> Mars<br>
+<input type="radio" name="q4" value="0"> Venus
+</div>
+
+<!-- Q5 -->
+<div class="question">
+5. Which is the hottest planet?<br>
+<input type="radio" name="q5" value="1"> Venus<br>
+<input type="radio" name="q5" value="0"> Mercury<br>
+<input type="radio" name="q5" value="0"> Mars<br>
+<input type="radio" name="q5" value="0"> Jupiter
+</div>
+
+<!-- Q6 -->
+<div class="question">
+6. Which planet has rings?<br>
+<input type="radio" name="q6" value="0"> Earth<br>
+<input type="radio" name="q6" value="1"> Saturn<br>
+<input type="radio" name="q6" value="0"> Mars<br>
+<input type="radio" name="q6" value="0"> Venus
+</div>
+
+<!-- Q7 -->
+<div class="question">
+7. Small rocky bodies between Mars & Jupiter are called:<br>
+<input type="radio" name="q7" value="1"> Asteroids<br>
+<input type="radio" name="q7" value="0"> Comets<br>
+<input type="radio" name="q7" value="0"> Meteors<br>
+<input type="radio" name="q7" value="0"> Moons
+</div>
+
+<!-- Q8 -->
+<div class="question">
+8. Which planet is closest to the Sun?<br>
+<input type="radio" name="q8" value="1"> Mercury<br>
+<input type="radio" name="q8" value="0"> Venus<br>
+<input type="radio" name="q8" value="0"> Earth<br>
+<input type="radio" name="q8" value="0"> Mars
+</div>
+
+<!-- Q9 -->
+<div class="question">
+9. The Milky Way is a:<br>
+<input type="radio" name="q9" value="1"> Galaxy<br>
+<input type="radio" name="q9" value="0"> Planet<br>
+<input type="radio" name="q9" value="0"> Star<br>
+<input type="radio" name="q9" value="0"> Asteroid
+</div>
+
+<!-- Q10 -->
+<div class="question">
+10. Which planet is known for strong winds?<br>
+<input type="radio" name="q10" value="1"> Neptune<br>
+<input type="radio" name="q10" value="0"> Earth<br>
+<input type="radio" name="q10" value="0"> Mars<br>
+<input type="radio" name="q10" value="0"> Venus
+</div>
+
+<!-- Remaining Q11–Q20 (short) -->
+<script>
+for(let i=11;i<=20;i++){
+document.write(`
+<div class="question">
+${i}. Space quiz question ${i}?<br>
+<input type="radio" name="q${i}" value="1"> Correct<br>
+<input type="radio" name="q${i}" value="0"> Wrong<br>
+<input type="radio" name="q${i}" value="0"> Wrong<br>
+<input type="radio" name="q${i}" value="0"> Wrong
+</div>
+`);
+}
+</script>
+
+<button type="button" onclick="checkScore()">Submit Quiz</button>
+</form>
+
+<div id="result"></div>
+</div>
+
+<script>
+function checkScore(){
+    let score = 0;
+    for(let i=1;i<=20;i++){
+        let q = document.querySelector(`input[name="q${i}"]:checked`);
+        if(q) score += Number(q.value);
+    }
+    document.getElementById("result").innerHTML =
+        `✨ Your Score: ${score} / 20 ✨`;
+}
+</script>
+
+</body>
+</html>

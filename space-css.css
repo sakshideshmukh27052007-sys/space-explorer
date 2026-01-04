@@ -1,0 +1,73 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #0b0d17;
+    color: white;
+}
+
+.hero {
+    height: 100vh;
+    position: relative;
+}
+
+.hero video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: rgba(0,0,0,0.6);
+    padding: 25px;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+}
+
+.box {
+    background: #1f2933;
+    padding: 25px;
+    text-decoration: none;
+    color: white;
+    width: 200px;
+    text-align: center;
+}
+
+.content {
+    padding: 50px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,220px);
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background: #1f2933;
+    padding: 15px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: 120px;
+    object-fit: contain;
+}
+
+.facts li {
+    margin: 8px 0;
+}
+
+.quiz p {
+    margin-top: 20px;
+}
